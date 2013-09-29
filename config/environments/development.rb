@@ -26,4 +26,8 @@ Wavesite::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Setting ImageMagik Location. May need to be reset based upon machine
+  Paperclip.options[:command_path] = "/usr/bin/convert"
+
 end

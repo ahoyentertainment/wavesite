@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922003336) do
+ActiveRecord::Schema.define(version: 20130929022546) do
+
+  create_table "user_settings", force: true do |t|
+    t.string   "state"
+    t.string   "country"
+    t.string   "back_color"
+    t.string   "u_font_style"
+    t.string   "u_font_color"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "profile_pic_file_name"
+    t.string   "profile_pic_content_type"
+    t.integer  "profile_pic_file_size"
+    t.datetime "profile_pic_updated_at"
+    t.string   "back_pic_file_name"
+    t.string   "back_pic_content_type"
+    t.integer  "back_pic_file_size"
+    t.datetime "back_pic_updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -22,6 +40,7 @@ ActiveRecord::Schema.define(version: 20130922003336) do
     t.date     "birthday"
     t.string   "last_name"
     t.string   "first_name"
+    t.string   "gender"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

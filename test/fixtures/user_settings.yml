@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  state: MyString
+  country: MyString
+  back_color: MyString
+  u_font_style: MyString
+  u_font_color: MyString
+
+two:
+  state: MyString
+  country: MyString
+  back_color: MyString
+  u_font_style: MyString
+  u_font_color: MyString

@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-    attr_accessible :name, :email, :first_name, :last_name, :birthday
+    attr_accessible :name, :email, :first_name, :last_name, :birthday, :gender
     before_save { self.email = email.downcase }
      
     validates :name, presence: true, length: {maximum: 15},

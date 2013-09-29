@@ -41,6 +41,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Use paperclip for file uploading 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
+# Install avtive merchant for payment plans
+gem 'activemerchant'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

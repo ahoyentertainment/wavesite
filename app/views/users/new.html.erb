@@ -1,27 +1,32 @@
-<h1>Sign Up</h1>
+ <script>
+$(function() {
+$( "#datepicker" ).datepicker({
+changeMonth: true,
+changeYear: true
+});
+});
+</script>
+
+<div id="user_form">
+   <h2>Sign Up!</h2>
    <%= form_for(@user) do |f| %>
-	<%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: "Username*" %>
 	
-	<%= f.label :email %>
-	<%= f.text_field :email %>
+	<%= f.email_field :email, placeholder: "Email*" %>
         
-	<%= f.label :first_name %>
-	<%= f.text_field :first_name %>
+	<%= f.text_field :first_name, placeholder: "First Name*" %>
 
-	<%= f.label :last_name %>
-	<%= f.text_field :last_name %>
+	<%= f.text_field :last_name, placeholder: "Last Name*" %>
 
-	<%= f.label :birthday %>
-	<%= f.text_field :birthday %>
+	<input class="text" id="datepicker" name="user[birthday]" placeholder = "Birthday*"/>
 
-	<%= f.label :password %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, placeholder: "Password*" %>
 
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, placeholder: "Confirm Password*" %>
 
 	<%= f.text_field :gender %>
 
  	<%= f.submit "Create", class: "signup_button" %>
     <% end %>
+</div>
+

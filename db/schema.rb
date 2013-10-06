@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131004222031) do
+ActiveRecord::Schema.define(version: 20131006012621) do
 
   create_table "user_settings", force: true do |t|
     t.string   "state"
@@ -29,7 +29,11 @@ ActiveRecord::Schema.define(version: 20131004222031) do
     t.string   "back_pic_content_type"
     t.integer  "back_pic_file_size"
     t.datetime "back_pic_updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "user_settings", ["created_at"], name: "index_user_settings_on_created_at"
+  add_index "user_settings", ["user_id"], name: "index_user_settings_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

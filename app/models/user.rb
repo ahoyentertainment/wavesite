@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
     before_save { self.email = email.downcase }
     before_create :create_remember_token
+    has_one :user_setting
      
     validates :name, presence: true, length: {maximum: 15},
 	uniqueness: true
